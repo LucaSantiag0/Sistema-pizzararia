@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/cadastrar', [UserController::class, 'store']);
+Route::resource('pedidos', PedidoController::class);
 
 //Regra autenticar e autorizar os acessos
 Route::middleware('auth:api')->group(function () {
